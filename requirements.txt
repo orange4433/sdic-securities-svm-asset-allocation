@@ -4,5 +4,6 @@ scipy
 scikit-learn
 scikit-optimize>=0.10.2
 openpyxl
+xlrd>=2.0.1
 matplotlib
 jupyter
