@@ -1,6 +1,6 @@
-# SVM Dynamic Asset Allocation
+# SDIC Securities: SVM-Based Asset Allocation and Fixed Income Strategy Research
 
-Securities research archive centered on **support-vector-machine screening for dynamic asset allocation**, with a second study comparing equity-index futures, convertible bonds and bond funds.
+Research conducted during the Fixed Income Strategy Research internship at **SDIC Securities**, centered on **support-vector-machine screening for dynamic asset allocation**, with a second study comparing equity-index futures, convertible bonds and bond funds.
 
 ## Research reports
 
