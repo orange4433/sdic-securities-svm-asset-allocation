@@ -35,7 +35,9 @@ Use Python 3.11 and install `requirements.txt`.
 
 ## Reproducibility and limits
 
-The monthly replay and the five-asset comparison were executed against the included data. **The replay consumes saved probabilities; it does not retrain an SVM.** Full Bayesian optimization and historical retraining were not rerun during archive preparation, so exact paper-table agreement is not claimed for a new fit.
+The full `svm/train_svm.py` workflow and every code cell in `svm/original_training.ipynb` were executed successfully against the included data. Each run trained all 10 assets, produced 139 monthly predictions per asset (January 2014 through July 2025), and completed 120 Bayesian optimization runs with 1,850 candidate evaluations in total. The original 20-call initial and 15-call rolling re-optimization budgets were retained. See [VALIDATION.md](VALIDATION.md) for the tested environment and runtime fixes.
+
+The monthly replay and the five-asset comparison also completed. **The replay consumes saved probabilities; it does not retrain an SVM.** Successful full execution does not establish exact agreement with historical paper tables, particularly across software versions and stochastic SVM fitting.
 
 The replay covers January 2014 through July 2025; the final month is partial through July 7. The example omits transaction costs. Original financial column names and runtime display text are retained for compatibility; comments and README are in English.
 

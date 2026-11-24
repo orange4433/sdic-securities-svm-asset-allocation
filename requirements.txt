@@ -1,8 +1,8 @@
 numpy
-pandas
+pandas>=2.2
 scipy
 scikit-learn
-scikit-optimize
+scikit-optimize>=0.10.2
 openpyxl
 matplotlib
 jupyter
