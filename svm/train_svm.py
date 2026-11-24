@@ -25,8 +25,8 @@ plt.rcParams['font.sans-serif'] = ['SimHei']  # Display Chinese text.
 plt.rcParams['axes.unicode_minus'] = False  # Display minus signs.
 
 # ==================== 1. Read economic-cycle data ====================
-sheet1_df = pd.read_excel('各类资产不同经济环境下表现.xlsx', sheet_name='Sheet1')
-sheet2_df = pd.read_excel('各类资产不同经济环境下表现.xlsx', sheet_name='Sheet2')
+sheet1_df = pd.read_excel('asset_performance_by_economic_regime.xlsx', sheet_name='Sheet1')
+sheet2_df = pd.read_excel('asset_performance_by_economic_regime.xlsx', sheet_name='Sheet2')
 
 # Remove rows containing the data-source marker.
 sheet1_df = sheet1_df[~sheet1_df['指标名称'].astype(str).str.contains("数据来源", na=False)]
@@ -635,23 +635,23 @@ print("="*50)
 # ==================== 17. Save results ====================
 # Save the merged data.
 try:
-    backtest_df.to_csv('策略回测结果.csv')
-    print("✅ 策略回测结果已保存至 '策略回测结果.csv'")
+    backtest_df.to_csv('strategy_backtest_results.csv')
+    print("✅ Backtest results saved to 'strategy_backtest_results.csv'")
 except PermissionError:
-    print("⚠️ 无法保存策略回测结果，文件可能被其他程序打开")
+    print("⚠️ Could not save strategy_backtest_results.csv; the file may be open in another program.")
 
 # Save SVM predictions.
 try:
-    svm_predictions.to_csv('SVM预测结果.csv')
-    print("✅ SVM预测结果已保存至 'SVM预测结果.csv'")
+    svm_predictions.to_csv('svm_predictions.csv')
+    print("✅ SVM predictions saved to 'svm_predictions.csv'")
 except PermissionError:
-    print("⚠️ 无法保存SVM预测结果，文件可能被其他程序打开")
+    print("⚠️ Could not save svm_predictions.csv; the file may be open in another program.")
 
 # Save SVM weights.
 try:
-    svm_weights.to_csv('SVM权重分布.csv')
-    print("✅ SVM权重分布已保存至 'SVM权重分布.csv'")
+    svm_weights.to_csv('svm_weights.csv')
+    print("✅ SVM weights saved to 'svm_weights.csv'")
 except PermissionError:
-    print("⚠️ 无法保存SVM权重分布，文件可能被其他程序打开")
+    print("⚠️ Could not save svm_weights.csv; the file may be open in another program.")
 
 print("\n✅ 所有策略回测完成！关键结果已输出")

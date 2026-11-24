@@ -16,11 +16,14 @@ The research combines macroeconomic regimes, calibrated SVM probabilities, time-
 | `svm/train_svm.py` | Corrected full training and backtest workflow |
 | `svm/original_training.ipynb` | Original research notebook |
 | `svm/asset_prices.xlsx` | Historical asset-price inputs |
-| `svm/各类资产不同经济环境下表现.xlsx` | Macroeconomic and regime inputs |
+| `svm/asset_performance_by_economic_regime.xlsx` | Macroeconomic and regime inputs |
 | `svm/best_svm_params.json` | Archived model parameters |
 | `replay/all_weather_svm.ipynb` | Compact offline strategy replay |
 | `replay/*.csv` | Monthly returns and previously estimated SVM probabilities |
-| `results/` | Archived probabilities, weights, backtest and comparison tables |
+| `results/svm_predictions.csv` | Archived SVM prediction results |
+| `results/svm_weights.csv` | Archived SVM portfolio weights |
+| `results/strategy_backtest_results.csv` | Archived strategy backtest results |
+| `results/strategy_performance_comparison.csv` | Archived strategy performance comparison |
 
 ## Running
 
